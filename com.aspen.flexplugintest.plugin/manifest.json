@@ -1,0 +1,74 @@
+{
+    "name": "FlexPlugin-Test",
+    "uuid": "com.aspen.flexplugintest",
+    "version": "1.0.0",
+    "author": "aspen",
+    "entry": "backend/plugin.cjs",
+    "description": "",
+    "repo": "https://github.com/icyqwq/FlexPlugin-Test",
+    "sdk": {
+        "version": "1.0.0"
+    },
+    "software": {
+        "minimumVersion": "1.0.0"
+    },
+    "os": [
+        {
+            "platform": "mac",
+            "minimumVersion": "10.15"
+        },
+        {
+            "platform": "windows",
+            "minimumVersion": "10"
+        }
+    ],
+    "device": [
+        {
+            "name": "flexbar",
+            "version": "1.0.0"
+        }
+    ],
+    "configPage": "",
+    "keyLibrary": {
+        "title": "$PluginName",
+        "style": {
+            "icon": "mdi mdi-puzzle"
+        },
+        "children": [
+          {
+              "title": "$Counter.Title",
+              "tip": "$Counter.Tip",
+              "cid": "com.aspen.flexplugintest.counter",
+              "config": {
+                  "keyType": "default",
+                  "clickable": true,
+                  "platform": [
+                      "windows",
+                      "mac"
+                  ]
+              },
+              "style": {
+                  "icon": "mdi mdi-gesture-tap-button",
+                  "width": 240
+              },
+              "data": {
+                  "rangeMin": "0",
+                  "rangeMax": "100"
+              }
+          }
+        ]
+    },
+    "local": {
+        "en": {
+            "PluginName": "FlexPlugin-Test",
+            "Counter": {
+                "Title": "Tap Counter",
+                "Tip": "Default keys with customizable drawable content",
+                "UI": {
+                    "RangeMin": "Minimum Value",
+                    "RangeMax": "Maximum Value"
+                }
+            }
+        }
+    }
+}
